@@ -81,24 +81,24 @@ class source : AppCompatActivity() {
 
         // sourcetext
 
-        val httpclient: HttpClient = DefaultHttpClient() // Create HTTP Client
-
-        val httpget = HttpGet("view-source:https://$webAddress") // Set the action you want to do
-
-        val response: HttpResponse = httpclient.execute(httpget) // Executeit
-
-        val entity: HttpEntity = response.getEntity()
-        val `is`: InputStream = entity.getContent() // Create an InputStream with the response
-
-        val reader = BufferedReader(InputStreamReader(`is`, "iso-8859-1"), 8)
-        val sb = StringBuilder()
-        var line: String? = null
-        while (reader.readLine().also({ line = it }) != null) // Read line by line
-            sb.append(""" $line """.trimIndent())
-        val resString = sb.toString() // Result is here
-
-
-        `is`.close() // Close the stream
+//        val httpclient: HttpClient = DefaultHttpClient() // Create HTTP Client
+//
+//        val httpget = HttpGet("view-source:https://$webAddress") // Set the action you want to do
+//
+//        val response: HttpResponse = httpclient.execute(httpget) // Executeit
+//
+//        val entity: HttpEntity = response.getEntity()
+//        val `is`: InputStream = entity.getContent() // Create an InputStream with the response
+//
+//        val reader = BufferedReader(InputStreamReader(`is`, "iso-8859-1"), 8)
+//        val sb = StringBuilder()
+//        var line: String? = null
+//        while (reader.readLine().also({ line = it }) != null) // Read line by line
+//            sb.append(""" $line """.trimIndent())
+//        val resString = sb.toString() // Result is here
+//
+//
+//        `is`.close() // Close the stream
 
 
         val SearchFloatButton = findViewById<FloatingActionButton>(R.id.searchbtn)
@@ -107,9 +107,9 @@ class source : AppCompatActivity() {
 
             dialog.show(supportFragmentManager, "searchDialog")
 
-            val args = Bundle()
-            args.putString("SourceTextToString",resString)
-            dialog.arguments = args;
+//            val args = Bundle()
+//            args.putString("SourceTextToString",resString)
+//            dialog.arguments = args;
 
 
         }

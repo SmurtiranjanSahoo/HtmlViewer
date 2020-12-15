@@ -26,16 +26,16 @@ class SearchDialogFragment : DialogFragment() {
 
         }
 
-        val searchText = search_EditText.editableText.toString()
-        search_searchBtn.setOnClickListener {
-
-
-            val SourceText = arguments?.getString("SourceTextToString")
-
-
-            var replacewith = "<span style='background-color:yellow'$searchText</span>"
-
-            var modifiedSearchText = SourceText?.replace(searchText, replacewith)
+//        val searchText = search_EditText.editableText.toString()
+//        search_searchBtn.setOnClickListener {
+//
+//
+//            val SourceText = arguments?.getString("SourceTextToString")
+//
+//
+//            var replacewith = "<span style='background-color:yellow'$searchText</span>"
+//
+//            var modifiedSearchText = SourceText?.replace(searchText, replacewith)
 
 //
 //            val Highlightscript = (" <script language=\"javascript\">" +
@@ -54,7 +54,7 @@ class SearchDialogFragment : DialogFragment() {
 //            sourceView.loadUrl("javascript:highlightSelection()");
 //            sourceView.text(Html.fromHtml(modifiedSearchText))
 
-        }
+//        }
 
         return rootView
     }
